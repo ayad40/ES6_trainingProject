@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +10,28 @@
 <body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
 <script>
-function test() {
-    const [delim, ...param] = arguments;
-    return param.join(delim);
+let data = { 
+role:"Engineer", 
+company:"SR", 
+personal: { 
+	name:"Sumit", 
+	age:25, 
+	country:"IND", 
+	state:undefined, 
+	spouse: { 
+		name:"Reena" 
+		} 
+	} 
 }
-test(", ", "Hello Sir", "How are you", "My name is Mike"); 
+let { company = "SR" } = data.company;
+let { name, age, state = "Delhi" } = data.personal;
+let { name: spouse } = data.personal.spouse;
+
+//Output: company=”SR”
+//State=”Delhi”
+
+
+
 </script>
 <body>
 </html>

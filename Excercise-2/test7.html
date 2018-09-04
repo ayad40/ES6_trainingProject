@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +10,10 @@
 <body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
 <script>
-function test() {
-    const [delim, ...param] = arguments;
-    return param.join(delim);
-}
-test(", ", "Hello Sir", "How are you", "My name is Mike"); 
+const funcReverse = (num) => +[...String(num)].reverse().join('');
+funcReverse(1234);
+//Output-4321
+
 </script>
 <body>
 </html>

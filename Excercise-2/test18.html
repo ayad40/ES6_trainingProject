@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +10,16 @@
 <body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
 <script>
-function test() {
-    const [delim, ...param] = arguments;
-    return param.join(delim);
+function example3(_ref1, _ref2) {
+  var { a, ...rest } = _ref1;
+  var { b = rest } = _ref2;
+  console.log(a)// Output -1
+  console.log(b)// Output -{a: 1, b: 2, c: 3},
 }
-test(", ", "Hello Sir", "How are you", "My name is Mike"); 
+example3({a: 1, b: 2, c: 3}, { b: undefined});
+
+
+
 </script>
 <body>
 </html>
