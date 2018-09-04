@@ -1,0 +1,15 @@
+<html>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+<script>
+function foo(n) {
+	const f = () => arguments[0] + n; // Output- 2
+	return f();
+}
+const myfoo = foo(1);
+console.log( myfoo );
+//arguments[0]=1, n=1, myfoo=2
+</script>
+ 
+<body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+
+
+<script>
+let guessMe1 = 1;
+let guessMe2 = 2;
+{   
+	try {
+		console.log( guessMe1, guessMe2 ); // OutPut-Oops ReferenceError: guessMe2 is not defined [guessMe2 should be defined before starting the try block because it's local variable and can't be use without declaration]
+	}
+	catch (err){
+		console.log("Oops", err)
+	}
+	let guessMe2 = 3;
+	console.log( guessMe1, guessMe2 ); // OutPut-1,3
+}
+console.log( guessMe1, guessMe2 ); // OutPut-1,2
+
+</script>
+ 
+<body>
+</html>

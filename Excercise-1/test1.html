@@ -1,0 +1,21 @@
+<html>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+
+
+<script>
+function Bar(){
+	(function self(){
+		console.log(this);// OutPut- this refres to window Object
+	})();
+}
+function Drinks(){
+	(()=> console.log(this))();//OutPut- this refers to Object of Drinks class
+}
+const barObj = new Bar();
+const drinksObj = new Drinks();
+
+</script>
+ 
+<body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+<script>
+function calc(total, tax=.20, tip=.10){
+	return total + total*tax + total*tip;
+}
+const bill = calc(100,null,.2);
+console.log(bill);//120
+//total=100
+//total*tax=total*null=0
+//total*tip=total*.2=20
+</script>
+<body>
+</html>

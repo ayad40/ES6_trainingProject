@@ -1,0 +1,17 @@
+<html>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+<script>
+var obj = {
+	i: 10,
+	b: () => console.log(this.i, this), // Output- Undefined,Window [Arrow function does not support this on direct use, hence this refer to window object]
+	c: function() {
+		console.log(this.i, this);// Output-10,{i: 10, b: ƒ, c: ƒ} [this refer to obj]
+	} 
+}
+obj.b();
+obj.c();
+</script>
+ 
+<body>
+</html>

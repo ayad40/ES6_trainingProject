@@ -1,0 +1,11 @@
+<html>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+<script>
+const Foo = () => { this.name ="Mike";};
+const obj = new Foo();
+console.log(obj.name);// Foo is not a constructor
+</script>
+ 
+<body>
+</html>

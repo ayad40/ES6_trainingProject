@@ -1,0 +1,21 @@
+<html>
+<body>
+<div class="cookieLocation_top"></div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+
+
+<script>
+let foo = 0;
+function bar() {
+	if (!foo) {
+		let foo = 10;
+		console.log(foo);// OutPut-10
+	}
+	console.log(foo);// OutPut-0
+}
+bar();
+
+</script>
+ 
+<body>
+</html>
